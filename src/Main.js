@@ -4,6 +4,7 @@ import Home from "./component/Home";
 import Contact from "./component/Contact";
 import About from "./component/About";
 import User from "./component/User";
+import MovieList from "./component/MovieList";
 
 class Main extends Component {
     render() {
@@ -26,6 +27,8 @@ class Main extends Component {
                             <NavLink to='/contact' activeStyle={{ color: "green" }}>Contact</NavLink>
                             <br></br>
                             <NavLink to='/user/john' activeStyle={{ color: "green" }}>User</NavLink>
+                            <br></br>
+                            <NavLink to='/movies' activeStyle={{ color: "green" }}>Movies</NavLink>
                         </div>
                         <hr></hr>
                         <Route path='/' exact render={Home} />
@@ -33,6 +36,7 @@ class Main extends Component {
                         <Route path='/contact' render={Contact} />
                         <Route path='/about' render={About} />
                         <Route path='/user/:username' render={User} />
+                        <Route path='/movies' component={MovieList} />
                     </div>
                 </Router>
             </div>
